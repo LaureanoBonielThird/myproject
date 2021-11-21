@@ -7,14 +7,24 @@ use Illuminate\Http\Request;
 class Mycontroller extends Controller
 {
     //
-    public function index() {
-        return view('Main.index');
+    public function index(){
+        $title = "Welcome to my Page";
+        return view('pages.index') -> with('title', $title);
+    }
+    
+    public function about(){
+        return view('pages.about');
     }
 
-    public function testpage(){
-        return view('Main.testvalidation');
-    } 
+    public function services(){
+        $data = array(
+            'title'=> 'Services',
+            'services' =>['Web Design','Programming','Analytics', 'SEO']
+        );
+        return view('pages.services')->with($data);
+    }
 
-    
 }
+
+
 
