@@ -33,10 +33,32 @@ Route::get('/', function () {
 
 */
 
-Route::get('/', 'MyController@index'); 
-Route::get('/about', 'MyController@about');
-Route::get('/service', 'MyController@services');
+// Route::get('/', 'MyController@index'); 
+// Route::get('/about', 'MyController@about');
+// Route::get('/service', 'MyController@services');
 
+
+// Route::resource('posts', 'PostController');
+
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'MyController@index');
+
+Route::get('/about', 'MyController@about');
+Route::get('/services', 'MyController@services');
 
 Route::resource('posts', 'PostController');
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

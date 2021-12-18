@@ -1,14 +1,13 @@
-@extends('layout.app')
-@section('content')
-        <h1> Our Services</h1>
-        <ul class="list-group">
-            @if(count($services)>0)
-            @foreach($services as $service)
-            <li class="list-group-item">{{$service}}</li>
-            @endforeach
-        </ul>
-        @endif
+@extends ('layout.app')
 
+@section ('content')
+            <h1> Services </h1>
 
-@endsection  
-
+            <u1 class = "list-group">
+                @if(count($services)>0)
+                @foreach($services as $services)
+                <li class = "list-group-item">{{$services}}</li>
+                @endforeach
+            </u1>
+            @endif
+@endsection
